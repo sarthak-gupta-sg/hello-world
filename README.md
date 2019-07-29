@@ -1,3 +1,2 @@
-# hello-world
-# Adding for Sarthak Gupta - 1
-# Adding for Sarthak Gupta - 2
+This is just a test repository
+Testing git and github
