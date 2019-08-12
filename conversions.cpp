@@ -11,15 +11,12 @@ int main()
 	cout << c << " " << i1 << " " << i2 << " " << c2 << endl;
 	
 	//unsafe conversions
-	int a  = 20000;
-	char uc = a;
+	int a { 10000 };
+	char uc { a };
 	int b = uc;
 	
-	if( a == b)
-		cout << "We have more than 8 bit size chars" << endl;
-	else
-		cout << a " != " << b << endl;
-	
+	cout << a << " " << b << " " << uc << endl;
+		
 	cout << "Press any key to continue:" ;
 	keep_window_open();
 	return 0;
