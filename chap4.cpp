@@ -4,7 +4,7 @@ int main()
 {
 	constexpr double inch_to_cm  {2.54}; //Prevents narrowing
 	double val;
-	char unit;
+	char unit = 'c';
 	cout << "Enter an number with unit (as i or c):"; 
 	cin >> val >> unit;
 		
@@ -15,7 +15,7 @@ int main()
 	else
 		cout << "Entered unit is unrecognised" << endl;
 
-	//Same thing as a switch statement
+	//Same thing with a switch statement
 	switch(unit)
 	{
 		case 'i' : cout << "Value in centimeter is: " << (val * inch_to_cm) << " cm" << endl;
