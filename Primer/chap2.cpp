@@ -40,17 +40,33 @@ int main()
 		r2 = 3.14;
 		bi = r2;
 		
-		//Will fail
+		//Will work
 		r2 = r1;
 		r1 = d;
 		
-		cout << "bi = " << bi << " d = " << d << "r2 = " << r2 << "r1 = " << r1 << endl;
+		cout << "bi = " << bi << " d = " << d << " r2 = " << r2 << " r1 = " << r1 << endl;
 	}
 	
 	//Check Pointers
 	{
-		int i = 5, &ri = i, *pi = ri;
+		int i = 5, &ri = i;
 		
+		//Will fail - CANNOT INITIALIZE POINTER WITH A REFERENCE OR ADDRESS OF A REFERENCE
+		//int *pi = ri;
+		//int *pi = &ri;
+		
+		//Will work
+		int *pi = nullptr;
+		pi = &i;
+		
+		cout << "*pi = " << *pi << endl;
+		
+		*pi = *pi * *pi;
+		cout << "i = " << i << endl;
+		
+		//Will fail
+		//double *dp = &i;
 	}
+
 	return 0;
 }
