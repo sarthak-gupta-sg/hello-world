@@ -44,12 +44,13 @@ int main()
 		r2 = r1;
 		r1 = d;
 		
-		cout << "bi = " << bi << " d = " << d << endl;
+		cout << "bi = " << bi << " d = " << d << "r2 = " << r2 << "r1 = " << r1 << endl;
 	}
 	
 	//Check Pointers
 	{
 		int i = 5, &ri = i, *pi = ri;
+		
 	}
 	return 0;
 }
