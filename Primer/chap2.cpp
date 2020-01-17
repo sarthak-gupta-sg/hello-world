@@ -66,6 +66,20 @@ int main()
 		
 		//Will fail
 		//double *dp = &i;
+		
+		if(pi == nullptr)
+			cout << "Invalid pointer" << endl;
+		else
+			cout << "Valid pointer" << endl;
+			
+		pi = nullptr;
+		
+		if(pi == nullptr)
+			cout << "Invalid pointer" << endl;
+		else
+			cout << "Valid pointer" << endl;
+
+		long *lp = &i;	
 	}
 
 	return 0;
