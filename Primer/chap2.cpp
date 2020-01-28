@@ -8,6 +8,7 @@ int main()
 	{
 		cout << "Checking for identifiers" << endl;
 		int _ = 5;
+		
 		double Double = 67.0;	
 		cout << _ << " " << Double << endl;
 		
@@ -79,8 +80,27 @@ int main()
 		else
 			cout << "Valid pointer" << endl;
 
-		long *lp = &i;	
+		//Will fail
+		//long *lp = &i;	
 	}
+	
+	//Check Constants
+	{
+		//Will fail
+		//const int buf;
+		
+		int cnt = 0;
+		const int sz = cnt;
+		
+		++cnt;
+		
+		//Will fail
+		//++sz;
+		
+		//int &r = 42;
+		const int &r = 42;
+	}
+	
 
 	return 0;
 }
