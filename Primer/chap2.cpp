@@ -84,7 +84,7 @@ int main()
 		//long *lp = &i;	
 	}
 	
-	//Check Constants
+	//Check Constants -- VERY IMPORTANT
 	{
 		//Will fail
 		//const int buf;
@@ -97,8 +97,15 @@ int main()
 		//Will fail
 		//++sz;
 		
-		//int &r = 42;
-		const int &r = 42;
+		//int &r = 42;       //is invalid
+		const int &r = 42;   //is valid
+		
+		int i = 42;
+		double d = 3.14;
+		
+		
+		//int &ri = d;    // invalid
+		const int &ri = d;  //valid
 	}
 	
 
