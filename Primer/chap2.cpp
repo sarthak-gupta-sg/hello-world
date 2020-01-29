@@ -100,12 +100,25 @@ int main()
 		//int &r = 42;       //is invalid
 		const int &r = 42;   //is valid
 		
-		int i = 42;
+		int i = 42, a = 43;
 		double d = 3.14;
 		
 		
 		//int &ri = d;    // invalid
 		const int &ri = d;  //valid
+		
+		int &ri2 = i;
+		
+		//Try to assign ri2 to another int - WILL FAIL
+		//&ri2 = a;
+		
+		const int b = 54;
+		const int *cptr = &sz;
+		cptr = &b;
+		const int * const cptrb = &sz;
+		
+		//Will fail
+		//cptrb = &b;
 	}
 	
 
