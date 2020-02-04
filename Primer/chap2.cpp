@@ -120,7 +120,7 @@ int main()
 		//Will fail
 		//cptrb = &b;
 	}
-	
+	//Test for user defined types
 
 	return 0;
 }
