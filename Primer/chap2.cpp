@@ -115,10 +115,18 @@ int main()
 		const int b = 54;
 		const int *cptr = &sz;
 		cptr = &b;
-		const int * const cptrb = &sz;
+		const int * const cptrb = &sz;   //valid
+		//const int * const cptrb = &d;   //invalid - types must match for pointers
 		
 		//Will fail
 		//cptrb = &b;
+		
+		int i2 = -1; // &ref = 0;
+		int *const p2 = &i2;
+		
+		const int *ptr = &i2;
+		i2 = 3;
+		cout << *ptr << endl;
 	}
 	//Test for user defined types
 
