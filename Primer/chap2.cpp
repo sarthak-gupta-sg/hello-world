@@ -2,6 +2,8 @@
 
 using namespace std;
 
+struct Foo { /*Empty*/ };
+
 int main()
 {
 	//Check identifiers
