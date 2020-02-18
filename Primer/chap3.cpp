@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -31,9 +32,18 @@ int main()
 	string s;
 	cout << s[0] << endl;
 	
+	cout << "\nEnter any string with punctuation symbols: " ; 
 	getline(cin, s);
 	for(auto a : s)
 		if(!ispunct(a))
 			cout << a;
+	
+	//Check Copy initialization
+	string s2 = test;
+	
+	test[5] = 'H';
+	cout << test << " " << s2 << endl;
+	
+	vector<vector<int>> name { {1, 2, 3}, {4, 5, 6} } ;
 	return 0;
 }
