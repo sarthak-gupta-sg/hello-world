@@ -13,13 +13,27 @@ int main()
 	
 	cout << test << endl;
 	
-	//Use a loop to change all chars to z
+	//Use a for loop to change all chars to z
 	for(decltype(test.size()) index = 0; index != test.size(); ++index)
 		test[index] = 'z';
 	
 	cout << test << endl;
 	
+	//Use a for loop to change all chars to z
+	decltype(test.size()) index = 0;
+	while( index != test.size() )
+	{
+		test[index] = 'k';
+		++index;
+	}
+	cout << test << endl;
+	
 	string s;
 	cout << s[0] << endl;
+	
+	getline(cin, s);
+	for(auto a : s)
+		if(!ispunct(a))
+			cout << a;
 	return 0;
 }
