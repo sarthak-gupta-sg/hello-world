@@ -45,5 +45,26 @@ int main()
 	cout << test << " " << s2 << endl;
 	
 	vector<vector<int>> name { {1, 2, 3}, {4, 5, 6} } ;
+	
+	//Vector Initialization
+	vector<int> v1, v2(10), v3(10, 42), v4 {10}, v5{10, 42};
+	vector<string> v6{10}, v7{10, "hi"};
+	
+	cout << v1.size() << " " 
+		 << v2.size() << " " 
+		 << v3.size() << " " 
+		 << v4.size() << " " 
+		 << v5.size() << " " 
+		 << v6.size() << " " 
+		 << v7.size() << " " 
+		 << endl;
+	
+	cout << v2[0] << " " 
+		 << v3[0] << " " 
+		 << v4[0] << " " 
+		 << v5[0] << " " 
+		 << v6[0] << " " 
+		 << v7[0] << " " 
+		 << endl;
 	return 0;
 }
