@@ -12,5 +12,14 @@ int main()
 		a = 'x';
 	
 	cout << test << endl;
+	
+	//Use a loop to change all chars to z
+	for(decltype(test.size()) index = 0; index != test.size(); ++index)
+		test[index] = 'z';
+	
+	cout << test << endl;
+	
+	string s;
+	cout << s[0] << endl;
 	return 0;
 }
