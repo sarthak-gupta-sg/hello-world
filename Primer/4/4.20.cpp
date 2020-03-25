@@ -5,9 +5,11 @@ using namespace std;
 
 int main()
 {
-    vector<string> v { "NDLS", "MMCT", "INDB"};
+    vector<string> vOne { "NDLS", "MMCT", "INDB"};
+    vector<string> vTwo ; //Empty
     
-    auto iter = v.begin();
+    auto iter = vOne.begin();
+    auto iter2 = vTwo.begin();
 
     cout << *iter++ << endl;
     
@@ -18,7 +20,15 @@ int main()
     //cout << *iter.empty() << endl;
     
     cout << "True is: " << true << " and False is: " << false << endl; 
-    if(iter->empty
+    if(iter->empty() == false)
+    {
+        cout << "Vector is not empty" << endl;
+    }
+    
+    if(iter2->empty() == true)
+    {
+        cout << "Vector is not empty" << endl;
+    }
 
     return 0;
 }
