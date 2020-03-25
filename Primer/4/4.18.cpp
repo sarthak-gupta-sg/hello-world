@@ -11,6 +11,7 @@ int main()
     auto beg = v.begin();
     while(beg != v.end() && *beg >= 0)
         cout << *++beg << " " << endl << flush;
+        //cout << ++*beg ; //This will lead to infinite loop since 
 
     return 0;
 }
