@@ -6,10 +6,12 @@ using namespace std;
 int main()
 {
     vector<string> vOne { "NDLS", "MMCT", "INDB"};
-    vector<string> vTwo ; //Empty
+    vector<string> vTwo { "", }; //NON Empty Container with EMPTY string
+    vector<string> vThree ; //Empty Container 
     
     auto iter = vOne.begin();
     auto iter2 = vTwo.begin();
+    auto iter3 = vThree.begin();
 
     cout << *iter++ << endl;
     
@@ -20,14 +22,27 @@ int main()
     //cout << *iter.empty() << endl;
     
     cout << "True is: " << true << " and False is: " << false << endl; 
-    if(iter->empty() == false)
+    if(iter->empty() == false) //better use if(!iter->empty())
     {
         cout << "Vector is not empty" << endl;
     }
     
-    if(iter2->empty() == true)
+    if(iter2->empty() == true) //better use if(iter->empty())
     {
-        cout << "Vector is not empty" << endl;
+        cout << "Vector's first element is empty" << endl;
+    }
+    
+    //SEG FAULT since iter3 is not pointing to anywhere (Empty container)
+    /*
+    if(iter3->empty() == true)
+    {
+      
+    }
+    */
+    
+    if(vThree.empty())
+    {
+         cout << "Empty Vector" << endl;
     }
 
     return 0;
