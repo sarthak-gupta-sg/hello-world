@@ -1,0 +1,2 @@
+g++ -c fact.cpp
+g++ fact.o factMain.cpp
