@@ -4,12 +4,20 @@ using namespace std;
 
 void findChar(const string & data, const char & c, int & position, int & numOfOccur)
 {
-    for(auto x : data)
+    int cntr = 0;
+    for(auto const & x : data) //reference to a const
     {
         if(x == c)
         {
             numOfOccur++;
+            
+            //Set position
+            if(position == 0)
+            {
+                position = cntr;
+            }
         }
+        cntr++;
     }
     return;
 }
@@ -25,6 +33,6 @@ int main()
     int numOfOccur {0};
     findChar(data, c, position, numOfOccur);
     
-    cout << "Position: " << position << " and number of occurrence: " << numOfOccur << endl;
+    cout << "First Position: " << position << " and number of occurrence: " << numOfOccur << endl;
     return 0;
 }
