@@ -4,8 +4,12 @@ using namespace std;
 
 void stringLower(string & data)
 {
-    for
-
+    for(auto & x : data)
+    {
+        x = tolower(x);
+    }
+    
+    return;
 }
 
 bool stringCapitalAny(string const & data)
