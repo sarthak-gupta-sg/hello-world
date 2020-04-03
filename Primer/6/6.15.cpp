@@ -4,6 +4,13 @@ using namespace std;
 
 void findChar(const string & data, const char & c, int & position, int & numOfOccur)
 {
+    for(auto x : data)
+    {
+        if(x == c)
+        {
+            numOfOccur++;
+        }
+    }
     return;
 }
 
