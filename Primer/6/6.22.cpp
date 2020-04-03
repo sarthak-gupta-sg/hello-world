@@ -28,6 +28,21 @@ void swap(int ** m, int ** n)
     return;
 }
 
+//This will not work - Addresses from main are copied and exchanged as local variables m and n. They are destroyed at end of function.
+/*
+void swap(int * m, int * n)
+{
+    int *temp = nullptr;
+    temp = m;
+    m = n;
+    n = temp;
+    
+    cout << "INSIDE SWAP FUNCTION:-" << endl;
+    cout << "a: " << *m << " and b: " << *n << endl;
+    return;
+}
+*/
+
 int main()
 {
     int a {25}, 
