@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void findChar()
+void findChar(const string & data, const char & c, int & position, int & numOfOccur)
 {
     return;
 }
@@ -16,7 +16,7 @@ int main()
     
     int position {0};
     int numOfOccur {0};
-    findChar();
+    findChar(data, c, position, numOfOccur);
     
     cout << "Position: " << position << " and number of occurrence: " << numOfOccur << endl;
     return 0;
