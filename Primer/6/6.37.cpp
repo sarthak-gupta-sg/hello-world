@@ -8,13 +8,13 @@ string (&p)[10] = test;
 //raw notation
 string (& function(int index))[10]
 {
-    return p;
+    return p; //or return test;
 }
 
 //C++11 notation
 auto functionCPP(int index) -> string (&)[10]
 {
-    return p;
+    return p; //or return test;
 }
 
 //decltype notation
