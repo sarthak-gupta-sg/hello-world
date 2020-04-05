@@ -44,7 +44,6 @@ int main()
         cout << *(*ptr + i) << " ";
     }
     
-    
     cout << endl;
     return 0;
 }
