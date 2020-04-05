@@ -41,7 +41,7 @@ int main()
     int (*ptr)[5] = arrType2(index);
     for(auto i = 0; i != 5; ++i)
     {
-        cout << *(*ptr + i) << " ";
+        cout << *(*ptr + i) << " "; //ptr is pointer to full array. *ptr is pointer to first element
     }
     
     cout << endl;
