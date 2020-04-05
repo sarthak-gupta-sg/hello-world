@@ -4,7 +4,8 @@ using namespace std;
 
 int factorial(int number)
 {
-    if(number > 1)
+    cout << number << " x " ;
+    if(number != 0)
     {
         return factorial(number - 1) * number;
     }
@@ -19,6 +20,7 @@ int main()
     cout << "Enter a number to find its factorial: ";
     cin >> num;
     
-    cout << "Factorial is : " << factorial(num) << endl;
+    long result = factorial(num);
+    cout << "\nFactorial is : " << result << endl;
     return 0;
 }
