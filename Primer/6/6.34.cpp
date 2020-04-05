@@ -5,7 +5,7 @@ using namespace std;
 int factorial(int number)
 {
     cout << number << " x " ;
-    if(number != 0)
+    if(number > 1)  //if(number != 0) //This will cause recursion loop for negative input
     {
         return factorial(number - 1) * number;
     }
