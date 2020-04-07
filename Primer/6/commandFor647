@@ -1,0 +1,7 @@
+FOR DEBUG MESSAGES ENABLE
+=========================
+g++ 6.47.cpp -Wall -pedantic
+
+FOR NO DEBUG
+============
+g++ 6.47.cpp -Wall -pedantic -DNDEBUG
