@@ -50,11 +50,15 @@ int main()
     }
     */
     
-    //This will work since 
+    //This will work since *ptr gives the whole array (same information as arr)
     for(auto z : *ptr)
     {
         cout << z << " ";
     }
+    
+    //Remember arr degenerates to address of its first element but its not same as p. 
+    //With arr we can apply begin(arr) and end(arr). 
+    //We can't do the same with p only
     
     cout << endl;
     return 0;
