@@ -16,7 +16,7 @@ int main()
         while(cin >> trans.bookNo >> trans.unitsSold >> trans.revenue)
         {
             //If we are still processing the same book
-            if(sales.bookNo == trans.bookNo)
+            if(sales.isbn() == trans.isbn())
             {
                 sales.unitsSold += trans.unitsSold;
                 sales.revenue += trans.revenue;
@@ -24,7 +24,7 @@ int main()
             else
             {
                 //Print results for previous book
-                cout << "ISBN: " << sales.bookNo << endl
+                cout << "ISBN: " << sales.isbn() << endl
                      << "Units sold: " << sales.unitsSold << endl
                      << "Total revenue: " << sales.revenue << endl
                      << endl;
@@ -34,7 +34,7 @@ int main()
         }
         
         //Print the last transaction
-        cout << "ISBN: " << sales.bookNo << endl
+        cout << "ISBN: " << sales.isbn() << endl
              << "Units sold: " << sales.unitsSold << endl
              << "Total revenue: " << sales.revenue << endl
              << endl;
