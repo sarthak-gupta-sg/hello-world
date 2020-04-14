@@ -18,8 +18,9 @@ int main()
             //If we are still processing the same book
             if(sales.isbn() == trans.isbn())
             {
-                sales.unitsSold += trans.unitsSold;
-                sales.revenue += trans.revenue;
+                //sales.unitsSold += trans.unitsSold;
+                //sales.revenue += trans.revenue;
+                sales.combine(trans);
             }
             else
             {
