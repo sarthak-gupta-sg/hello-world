@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Call using a.out < input.txt > output.txt to read from input.txt and store output to output.txt
 int main()
 {
     salesData sales;    //Variable to hold data for next transaction
