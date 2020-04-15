@@ -3,7 +3,7 @@
 
 #include <string>
 
-class Person
+struct Person
 {
     std::string name;
     std::string address;
@@ -18,5 +18,19 @@ class Person
         return address;
     }
 };
+
+//Non Member functions
+std::istream& read(std::istream & in, Person & object)
+{
+    in >> object.name >> object.address;
+    return in;
+}
+
+std::ostream& print(std::ostream & out, Person const & object)
+{
+    out << "Name: " << object.getName() << std::endl
+        << "Address: " << object.getAddress() << std::endl; 
+    return out;
+}
 
 #endif
