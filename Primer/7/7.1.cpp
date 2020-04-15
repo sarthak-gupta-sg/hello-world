@@ -46,9 +46,5 @@ int main()
         return -1;
     }
     
-    const int a {1};
-    int const * const p = &a;
-    cout << *p << endl;
-
     return 0;
 }
