@@ -1,5 +1,5 @@
 #include <iostream>
-#include "salesData72.h"
+#include "salesData76.h"
 
 using namespace std;
 
@@ -26,11 +26,7 @@ int main()
             else
             {
                 //Print results for previous book
-                cout << "ISBN: " << sales.isbn() << endl
-                     << "Units sold: " << sales.unitsSold << endl
-                     << "Total revenue: " << sales.revenue << endl
-                     << endl;
-                     
+                sales.print(cout) << endl;
                 sales = trans;
             }
         }
@@ -48,5 +44,9 @@ int main()
         return -1;
     }
     
+    const int a {1};
+    int const * const p = &a;
+    cout << *p << endl;
+
     return 0;
 }
