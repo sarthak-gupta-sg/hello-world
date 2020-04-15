@@ -26,16 +26,13 @@ int main()
             else
             {
                 //Print results for previous book
-                sales.print(cout) << endl;
+                print(cout, sales) << endl;
                 sales = trans;
             }
         }
         
         //Print the last transaction
-        cout << "ISBN: " << sales.isbn() << endl
-             << "Units sold: " << sales.unitsSold << endl
-             << "Total revenue: " << sales.revenue << endl
-             << endl;
+        print(cout, sales) << endl;
     }
     else
     {

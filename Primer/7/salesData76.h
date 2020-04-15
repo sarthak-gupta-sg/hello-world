@@ -26,20 +26,20 @@ struct salesData
     {
         return;
     }
-    
-    std::istream& read(std::istream & in)
-    {
-        in >> bookNo >> unitsSold >> revenue;
-        return in;
-    }
-    
-    std::ostream& print(std::ostream & out)
-    {
-        out << "ISBN: " << bookNo << std::endl
-            << "Units sold: " << unitsSold << std::endl
-            << "Total revenue: " << revenue << std::endl; 
-        return out;
-    }
 };
+
+std::istream& read(std::istream & in, salesData & sales)
+{
+    in >> sales.bookNo >> sales.unitsSold >> sales.revenue;
+    return in;
+}
+
+std::ostream& print(std::ostream & out, salesData const & sales)
+{
+    out << "ISBN: " << sales.isbn() << std::endl
+        << "Units sold: " << sales.unitsSold << std::endl
+        << "Total revenue: " << sales.revenue << std::endl; 
+    return out;
+}
 
 #endif
