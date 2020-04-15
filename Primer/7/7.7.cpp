@@ -14,14 +14,12 @@ int main()
         salesData trans;    //Variable to hold running sum
         
         //Read and process remaining transactions
-        while(cin >> trans.bookNo >> trans.unitsSold >> trans.revenue)
+        while(read(cin, trans))
         {
             //If we are still processing the same book
             if(sales.isbn() == trans.isbn())
             {
-                //sales.unitsSold += trans.unitsSold;
-                //sales.revenue += trans.revenue;
-                sales.combine(trans);
+                sales = add(sales, trans);
             }
             else
             {
@@ -41,9 +39,5 @@ int main()
         return -1;
     }
     
-    const int a {1};
-    int const * const p = &a;
-    cout << *p << endl;
-
     return 0;
 }

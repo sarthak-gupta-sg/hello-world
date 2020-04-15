@@ -21,13 +21,9 @@ struct salesData
         this->revenue += object.revenue;
         return;
     }
-    
-    void add()
-    {
-        return;
-    }
 };
 
+//Non Member functions
 std::istream& read(std::istream & in, salesData & sales)
 {
     in >> sales.bookNo >> sales.unitsSold >> sales.revenue;
@@ -40,6 +36,13 @@ std::ostream& print(std::ostream & out, salesData const & sales)
         << "Units sold: " << sales.unitsSold << std::endl
         << "Total revenue: " << sales.revenue << std::endl; 
     return out;
+}
+
+salesData add(salesData lhs, salesData rhs)
+{
+    salesData sum {lhs};
+    sum.combine(rhs);
+    return sum;
 }
 
 #endif
