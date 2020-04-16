@@ -18,6 +18,9 @@ struct salesData
     
     //One paramter filled
     salesData(std::string s) : bookNo(s) {}
+        
+    //Using istream
+    salesData(std::istream & in);
     
     std::string isbn() const
     {
@@ -53,5 +56,12 @@ salesData add(salesData lhs, salesData rhs)
     sum.combine(rhs);
     return sum;
 }
+
+//Using istream
+salesData::salesData(std::istream & in)
+{
+    read(in, *this);
+}
+
 
 #endif
