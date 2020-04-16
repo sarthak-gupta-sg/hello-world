@@ -3,11 +3,12 @@
 
 #include <string>
 
-struct Person
+class Person
 {
     std::string name;
     std::string address;
     
+public:
     //Constructor
     Person(std::string const & nam, std::string const & addr) : name(nam), address(addr)
     {
@@ -22,6 +23,9 @@ struct Person
     {
         return address;
     }
+
+friend std::istream& read(std::istream & in, Person & object);
+friend std::ostream& print(std::ostream & out, Person const & object);
 };
 
 //Non Member functions
