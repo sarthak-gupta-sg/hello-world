@@ -4,6 +4,12 @@
 #include <string>
 #include <iostream>
 
+//Bring the constructer with istream inside the class
+
+//We need to declare the function read before struct definition since read is used by constructor
+struct salesData;
+std::istream& read(std::istream & in, salesData & sales);
+
 struct salesData
 {
     std::string bookNo;
@@ -20,7 +26,10 @@ struct salesData
     salesData(std::string s) : bookNo(s) {}
         
     //Using istream
-    salesData(std::istream & in);
+    salesData(std::istream & in)
+    {
+        read(in, *this);
+    }
     
     std::string isbn() const
     {
@@ -56,12 +65,5 @@ salesData add(salesData lhs, salesData rhs)
     sum.combine(rhs);
     return sum;
 }
-
-//Using istream
-salesData::salesData(std::istream & in)
-{
-    read(in, *this);
-}
-
 
 #endif

@@ -8,12 +8,11 @@ int main()
 {
     //Variable to hold data for next transaction
     
-    //salesData sales;
-    salesData sales("Z");
-    //salesData sales("Z", 1, 1);
+    //Initialize and read the first transaction
+    salesData sales(cin);
     
-    //read the first transaction and ensure that there are data to process
-    if(cin >> sales.bookNo >> sales.unitsSold >> sales.revenue)
+    //Ensure that there are data to process
+    if(sales.isbn().length() != 0) // You can use if(!sales.isbn().empty())
     {
         salesData trans;    //Variable to hold running sum
         
@@ -30,6 +29,7 @@ int main()
                 //Print results for previous book
                 print(cout, sales) << endl;
                 sales = trans;
+                cout << sales.isbn().length() << endl;
             }
         }
         
