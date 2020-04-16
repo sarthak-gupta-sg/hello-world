@@ -48,7 +48,7 @@ friend std::istream& read(std::istream & in, salesData & sales);
 friend std::ostream& print(std::ostream & out, salesData const & sales);
 };
 
-//Non Member functions
+//Non Member friend functions
 std::istream& read(std::istream & in, salesData & sales)
 {
     in >> sales.bookNo >> sales.unitsSold >> sales.revenue;
@@ -63,6 +63,8 @@ std::ostream& print(std::ostream & out, salesData const & sales)
     return out;
 }
 
+//Non Member functions
+//Not declared as friend since it doesn't access private members of salesData directly
 salesData add(salesData lhs, salesData rhs)
 {
     salesData sum {lhs};
