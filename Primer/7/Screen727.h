@@ -19,11 +19,33 @@ public:
     inline char get(pos ht, pos wd) const;
     Screen & move(pos r, pos c);
     
+    //set functions
+    Screen & set(char);
+    Screen & set(pos, pos, char);
+    
+    //display functions
+    Screen & display(std::ostream & os)
+    {
+        do_display(os);
+        return *this;
+    }
+
+    Screen const & display(std::ostream & os) const
+    {
+        do_display(os);
+        return *this;
+    }
 
 private:
     pos cursor {0};
     pos height {0}, width {0};
     std::string contents;
+    
+    void do_display(std::ostream & os) const
+    {
+        os << contents;
+        return;
+    }
 };
 
 char Screen:get(pos r, pos c) const
@@ -38,4 +60,19 @@ Screen & Screen::move(pos r, pos c)
     cursor = row + c;
     return *this;
 }
+
+inline
+Screen & Screen::set(char c)
+{
+    contents[cursor] = c;
+    return *this;
+}
+
+inline
+Screen & Screen::set(pos r, pos col, char ch)
+{
+    contents[r * width + col] = ch;
+    return *this;
+}
+
 #endif
