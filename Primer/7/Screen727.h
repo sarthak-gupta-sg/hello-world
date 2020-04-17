@@ -48,7 +48,7 @@ private:
     }
 };
 
-char Screen:get(pos r, pos c) const
+char Screen::get(pos r, pos c) const
 {
     return contents[(r * width) + c];
 }
