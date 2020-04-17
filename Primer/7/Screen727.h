@@ -18,6 +18,7 @@ public:
     
     inline char get(pos ht, pos wd) const;
     Screen & move(pos r, pos c);
+    
 
 private:
     pos cursor {0};
@@ -37,5 +38,4 @@ Screen & Screen::move(pos r, pos c)
     cursor = row + c;
     return *this;
 }
-
 #endif
