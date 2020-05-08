@@ -22,5 +22,7 @@ istream& function(istream& in)
 int main()
 {
     function(cin);
+    int a;
+    a / 0;
     return 0;
 }
