@@ -1,0 +1,24 @@
+ISBN: A
+Units sold: 2
+Total revenue: 4
+
+ISBN: B
+Units sold: 3
+Total revenue: 7
+
+ISBN: C
+Units sold: 5
+Total revenue: 9
+
+ISBN: A
+Units sold: 2
+Total revenue: 4
+
+ISBN: B
+Units sold: 3
+Total revenue: 7
+
+ISBN: C
+Units sold: 5
+Total revenue: 9
+
