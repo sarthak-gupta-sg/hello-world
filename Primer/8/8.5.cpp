@@ -7,15 +7,14 @@ using namespace std;
 int main()
 {
     vector<string> text;
-    vector<string> tokens;
     fstream infile("8.1.cpp");
     
     while(!infile.eof())
     {
-        string line;
+        string word;
         //getline(infile, line);
-        infile >> line;
-        text.push_back(line);
+        infile >> word;
+        text.push_back(word);
     }
     
     for(auto & v : text)

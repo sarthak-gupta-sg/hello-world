@@ -13,8 +13,7 @@ int main()
     while(!infile.eof())
     {
         string line;
-        //getline(infile, line);
-        infile >> line;
+        getline(infile, line);
         text.push_back(line);
     }
     
