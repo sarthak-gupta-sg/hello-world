@@ -13,13 +13,13 @@ struct PersonInfo
 
 bool valid(string const & number)
 {
-    //Code to check validity
+    //ADD Code to check validity
     return true;
 }
 
 string const & format(string const & number)
 {
-    //format number and return
+    //ADD Code to format number and return
     return number;
 }
 
