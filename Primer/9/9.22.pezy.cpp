@@ -9,6 +9,7 @@ void insertDoubleValue(vector<int>& iv, int some_val)
     while (iter != mid) {
         if (*iter == some_val) {
             iter = iv.insert(iter, 2 * some_val);
+            std::cout << *iter;
             ++iter;
             ++cursor;
             mid = iv.begin() + cursor;
