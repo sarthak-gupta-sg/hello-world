@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    list<char const *> lvar { "Varsha", "Sarthak", "Baby"};
+    list<char const *> lvar { "BARC", "RRCAT", "NPCIL"};
     vector<string> vvar;
     
     vvar.assign(lvar.cbegin(), lvar.cend());
