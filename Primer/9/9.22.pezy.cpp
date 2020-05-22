@@ -8,6 +8,8 @@ void insertDoubleValue(vector<int>& iv, int some_val)
     auto iter = iv.begin(), mid = iv.begin() + cursor;
     while (iter != mid) {
         if (*iter == some_val) {
+
+//THIS IS DANGEROUS AS THE iterators and pointers get mostly invalidated. This works BUT DONOT USE THIS
             iter = iv.insert(iter, 2 * some_val);
             std::cout << *iter;
             ++iter;
