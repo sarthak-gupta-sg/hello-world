@@ -1,6 +1,7 @@
 /*
  * Program to remove even numbered elements and
  * duplicate the odd numbered elements
+ * using lists
  */ 
 
 #include <iostream>
@@ -17,15 +18,18 @@ int main()
         if(*iter % 2)
         {
             //odd
+            iter = lst.insert(iter, *iter);
+            advance(iter, 2);
+            
         }
         else
         {
             //even
-            lst.erase(iter);
+            iter = lst.erase(iter);
         }
     }
     
-    for(auto const &x : d)
+    for(auto const &x : lst)
     {
         cout << x << " " ;
     }
