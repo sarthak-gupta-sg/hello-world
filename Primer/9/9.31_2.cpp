@@ -38,9 +38,17 @@ int main()
         }
     }
     
+    //Print
     for(auto const &x : flst)
     {
         cout << x << " " ;
+    }
+    cout << "\n";
+    
+    //For testing
+    for(auto curr = flst.begin(); curr != flst.end(); ++curr)
+    {
+        cout << *curr << " " ;
     }
     cout << "\n";
     return 0;
