@@ -5,13 +5,14 @@ using namespace std;
 
 void replace(string & s, string const & oldVal, string const & newVal)
 {
-    for(auto iter = 0; iter != s.size(); )
+    for(auto iter = s.begin(); iter != s.end(); )
     {
-        string temp = s.substr(iter, oldVal.size());
+        string temp(iter, iter + oldVal.size());
         if(temp == oldVal)
         {
             cout << "HIT " << temp << endl;
-            s.replace(iter, oldVal.size(), newVal);
+            s.erase(iter, iter + oldVal.size());
+            iter = s.insert(iter, newVal.begin(), newVal.end());
             iter += newVal.size();
         }
         else
