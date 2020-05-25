@@ -36,6 +36,7 @@ int main()
     string output;
     for (; !s.empty(); s.pop()) 
     {
+        //Good strategy to fill string in reverse
         output.insert(output.begin(), s.top());
     }
     cout << output << endl;
