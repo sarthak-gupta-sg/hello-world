@@ -11,9 +11,14 @@ void replace(string & s, string const & oldVal, string const & newVal)
         if(temp == oldVal)
         {
             cout << "HIT " << temp << endl;
-            s.erase(iter, iter + oldVal.size());
+            iter = s.erase(iter, iter + oldVal.size());
             iter = s.insert(iter, newVal.begin(), newVal.end());
             iter += newVal.size();
+            
+            /* For iterator based operations as above
+             * it is important that the returning iterator is retrived.
+             * This is because the iterators can become invalid in case of reallocations
+             */ 
         }
         else
         {
