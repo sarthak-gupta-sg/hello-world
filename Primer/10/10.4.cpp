@@ -6,9 +6,9 @@ using namespace std;
 
 int main()
 {
-    vector<int> values;
-    int result {0};
-    int terms {0};
+    vector<double> values;
+    double result {0};
+    double terms {0};
     
     cout << "Enter Integers (x to stop):\n";
     while(cin >> terms)
