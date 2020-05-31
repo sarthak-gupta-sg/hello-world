@@ -24,7 +24,7 @@ int main()
     
     cin.clear();
     cin.ignore();
-    result = accumulate(values.cbegin(), values.cend(), 0);
+    result = accumulate(values.cbegin(), values.cend(), 0.0);
     cout << "Your result is: " << result << "\n";
     
     return 0;
