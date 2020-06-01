@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <list>
+#include <cstring>
 
 using namespace std;
 
@@ -18,9 +19,10 @@ int main()
     std::cout << (void *) roster1[0] << std::endl;
     std::cout << (void *) roster2.front() << std::endl;
     
-    char const * c1 = "abcd";
-    char const * c2 = "abcd";
+    char const * c1 = "abcdef";
+    char const * c2 = "abcdef";
     
+    cout << *c1 << "\n";
     if(c1 == c2)
     {
         cout << (void *)c1 << " and " << (void *)c2 << " are equal\n" ;
@@ -29,7 +31,10 @@ int main()
     {
         cout << (void *)c1 << " and " << (void *)c2 << " are not equal" ;
     }
-     
-     cout << strlen(c1) << "\n";
+    
+    cout << "strlen: " << strlen(c1) << " vs sizeof: " << sizeof(c1) << "\n";
+    
+    char c3[] = "def";
+    cout << "strlen: " << strlen(c3) << " vs sizeof: " << sizeof(c3) << "\n";
     return 0;
 }
