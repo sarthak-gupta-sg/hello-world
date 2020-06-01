@@ -30,5 +30,6 @@ int main()
         cout << (void *)c1 << " and " << (void *)c2 << " are not equal" ;
     }
      
+     cout << strlen(c1) << "\n";
     return 0;
 }
