@@ -32,9 +32,12 @@ int main()
         cout << (void *)c1 << " and " << (void *)c2 << " are not equal" ;
     }
     
-    cout << "strlen: " << strlen(c1) << " vs sizeof: " << sizeof(c1) << "\n";
+    cout << "On linux g++ they are equal. On Windows cl.exe they are unequal\n";
+	
+	cout << "\nstrlen: " << strlen(c1) << " vs sizeof: " << sizeof(c1) << "\n";
     
     char c3[] = "def";
-    cout << "strlen: " << strlen(c3) << " vs sizeof: " << sizeof(c3) << "\n";
+    cout << "\nstrlen: " << strlen(c3) << " vs sizeof: " << sizeof(c3) << "\n";
+	
     return 0;
 }
