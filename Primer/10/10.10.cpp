@@ -10,6 +10,15 @@ void elimDups( std::vector<std::string> &words )
 	return;
 }
 
+bool isShorter( std::string word1, std::string word2 )
+{
+	if( word1.size() < word2.size() )
+	{
+		return true;
+	}
+	return false;
+}
+
 int main()
 {
 	std::vector<std::string> w { "the", "quick", "red", "fox", "jumps", 
@@ -28,7 +37,7 @@ int main()
 		std::cout << *it << " ";
 	}
 	
-	stable_sort( w.begin(), w.end() );
+	stable_sort( w.begin(), w.end(), isShorter );
 	
 	std::cout << "\nAfter Stable Sort\n" ;
 	for( auto it = w.begin(); it != w.end(); ++it )
