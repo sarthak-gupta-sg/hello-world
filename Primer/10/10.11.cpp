@@ -23,32 +23,32 @@ int main()
 {
 	std::vector<std::string> w { "the", "quick", "red", "fox", "jumps", 
 								 "over", "the", "slow", "red", "turtle"	};
-	std::cout << "Before Elim Dups\n" ;
+	std::cout << "Before elim dups:\n" ;
 	for( auto it = w.begin(); it != w.end(); ++it )
 	{
 		std::cout << *it << " ";
 	}
-	std::cout << std::endl << std::flush;
+	std::cout << std::endl << std::endl << std::flush;
 	
 	//Eliminate duplicates from vector
 	elimDups( w );
 	
-	std::cout << "After Elim Dups\n" ;
+	std::cout << "After elim dups and before sorting:\n" ;
 	for( auto it = w.begin(); it != w.end(); ++it )
 	{
 		std::cout << *it << " ";
 	}
-	std::cout << std::endl << std::flush;
+	std::cout << std::endl << std::endl << std::flush;
 	
 	//Perform stable sort
 	std::stable_sort( w.begin(), w.end(), isShorter );
 	
-	std::cout << "After Stable Sort\n" ;
+	std::cout << "After stable sort:\n" ;
 	for( auto it = w.begin(); it != w.end(); ++it )
 	{
 		std::cout << *it << " ";
 	}
-	std::cout << std::endl << std::flush;
+	std::cout << std::endl << std::endl << std::flush;
 
 	return 0;
 }
