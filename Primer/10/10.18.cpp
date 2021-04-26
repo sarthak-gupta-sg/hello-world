@@ -6,7 +6,7 @@ int main()
 {	
 	std::vector<std::string> w { "the", "quick", "red", "fox", "jumps", "over", "the", "slow", "red", "turtle" };
 	auto sz { 0 };
-	std:: cout << "Enter required size of word to be searched in the vector: " << std::flush;
+	std:: cout << "Enter required size of words to be searched in the vector: " << std::flush;
 	std::cin >> sz;
 	
 	auto lambda { [sz]( std::string const & term ) -> bool { return term.size() >= sz ; } };
