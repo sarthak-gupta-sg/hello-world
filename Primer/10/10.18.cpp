@@ -12,6 +12,8 @@ int main()
 	auto lambda { [sz]( std::string const & term ) -> bool { return term.size() >= sz ; } };
 	
 	auto iter { std::partition( w.begin(), w.end(), lambda ) };
+	//Exercise 10.19
+	//auto iter { std::stable_partition( w.begin(), w.end(), lambda ) };
 	
 	std::cout << "Number of elements that fulfill criteria are: " << iter - w.begin() << std::endl << std::flush;
 	std::cout << "Elements are as follows:" << std::endl << std::flush;
