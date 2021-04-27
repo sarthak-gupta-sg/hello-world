@@ -16,7 +16,9 @@ int main()
 	std:: cout << "Enter required size of words to be searched in the vector: " << std::flush;
 	std::cin >> sz;
 	
-	auto count { std::count_if( w.begin(), w.end(), std::bind( checkSize, std::placeholders::_1, sz ) ) };
+	auto bindFn { std::bind( checkSize, std::placeholders::_1, sz ) };
+	
+	auto count { std::count_if( w.begin(), w.end(), bindFn ) };
 	std::cout << "Number of words that fulfill criteria are: " << count << std::endl;
 	return 0;
 }
