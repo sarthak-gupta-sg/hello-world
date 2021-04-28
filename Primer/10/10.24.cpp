@@ -24,7 +24,7 @@ int main()
 	std::cin >> word;
 	
 	//std::find_if takes a unary predicate, so we use std::bind to create a partial application function bindFn
-	//bindFn takes 1 argument, that is the string.
+	//bindFn takes 1 argument, that is the integer.
 	//checkSizeInvert takes two arguments, string and the int
 	//std::placeholders::_1 means that 1st argument of bindFn, is passed on to checkSize as IInd argument of checkSizeInvert.
 	//Ist argument of checkSizeInvert is BOUND to value of word
