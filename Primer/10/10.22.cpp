@@ -16,6 +16,8 @@ int main()
 	std:: cout << "Enter required size of words to be searched in the vector: " << std::flush;
 	std::cin >> sz;
 	
+	//Read https://stackoverflow.com/questions/6610046/stdfunction-and-stdbind-what-are-they-and-when-should-they-be-used
+	
 	//std::count_if takes a unary predicate, so we use std::bind to create a partial application function bindFn
 	//bindFn takes 1 argument, that is the string.
 	//checkSize takes two arguments, string and the int

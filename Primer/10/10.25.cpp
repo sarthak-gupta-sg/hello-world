@@ -15,5 +15,7 @@ int main()
 	std:: cout << "Enter required size of words to be searched in the vector: " << std::flush;
 	std::cin >> sz;
 	
+	auto iter { std::partition( w.begin(), w.end(), 
+	
 	return 0;
 }
