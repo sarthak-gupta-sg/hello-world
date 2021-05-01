@@ -1,2 +1,2 @@
-# Trial Repository for Git and GitHub
-1. This is just a test repository to learn about git and github.
+# Trial repository for git and GitHub
+1. A test repository to learn about git and Github.
