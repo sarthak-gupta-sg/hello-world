@@ -26,10 +26,7 @@ void methodOne( std::string & word )
 void methodTwo( std::string & word )
 {
 	//Lowercase full word
-	for( auto & c : word )
-	{
-		c = std::tolower(c);
-	}
+	std::transform( word.begin(), word.end(), word.begin(), tolower );
 
 	//std::ispunct only takes unsigned char (strictly) so as a template we need to ensure we are providing unsigned char to it
 	//See https://en.cppreference.com/w/cpp/string/byte/ispunct
