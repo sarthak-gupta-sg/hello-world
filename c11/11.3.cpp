@@ -12,6 +12,7 @@ int main()
 		++wordCnt[word];
 	}
 	
+	std::cout << "Word count is:" << std::endl;
 	//element is of type std::pair
 	for(auto const & element : wordCnt)
 	{
