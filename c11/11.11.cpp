@@ -11,11 +11,14 @@ int main()
 {
 	//Old standard
 	//typedef bool (*compFn) ( salesData const & s1, salesData const & s2 ) ;
+	//std::set<salesData, compFn> bookStore(compareIsbn);
 	
 	//New C++11 standard
 	using compFn = bool (*) ( salesData const & s1, salesData const & s2 );
-	
 	std::set<salesData, compFn> bookStore(compareIsbn);
+	
+	//decltype
+	//std::set<salesData, decltype(compareIsbn)*> bookStore(compareIsbn);
 	
 	return 0;
 }
