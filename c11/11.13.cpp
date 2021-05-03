@@ -15,8 +15,11 @@ int main()
 		//Method 1
 		//dataStore.push_back( std::make_pair( word, number ) );
 		
-		//Method 2
-		dataStore.push_back( { word, number } );
+		//Method 2: Braced initialiser
+		//dataStore.push_back( { word, number } );
+		
+		//Method 3
+		dataStore.push_back( std::pair<std::string, int> (word, number) );
 	}
 	
 	std::cout << "Stored values:" << std::endl;
