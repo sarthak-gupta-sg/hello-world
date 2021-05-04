@@ -9,6 +9,7 @@ int main()
 	std::multimap<std::string, std::vector<std::string>> famNameChildren;
 	
 	//Add families and children
+	//We cannot subscript a multimap or unordered_multimap 
 	famNameChildren.insert( { "Smith", { "One", "Two", "Three" } } );
 	famNameChildren.insert( { "Gosling", { "One" } } );
 	famNameChildren.insert( { "Smith", { "Four", "Five" } } );
