@@ -9,7 +9,12 @@ int main()
 	//Press enter followed by ctrl-d in Linux to invalidate input stream
 	while(std::cin >> word)
 	{
-		++wordCnt[word];
+		auto ref { wordCnt.insert( { word, 1 } ) };
+		if( !ref.second )
+		{
+			//Word already exists, increment count
+			++(ref.first->second);
+		}
 	}
 	
 	std::cout << "Word count is:" << std::endl;
